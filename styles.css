@@ -111,9 +111,20 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   top: -20%;
   right: -10%;
-  width: 640px;
-  height: 640px;
-  background: radial-gradient(circle, rgba(16,185,129,.12) 0%, transparent 70%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(16,185,129,.18) 0%, rgba(16,185,129,.06) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(16,185,129,.07) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -242,7 +253,23 @@ section { padding: 8rem 4rem; }
 }
 
 /* ── Services ────────────────────────────────────────────── */
-.services { background: var(--bg); }
+.services {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(16,185,129,.07) 0%, transparent 65%);
+  pointer-events: none;
+}
 
 .services-header { margin-bottom: 4rem; }
 
@@ -303,7 +330,24 @@ section { padding: 8rem 4rem; }
 }
 
 /* ── Testimonials ────────────────────────────────────────── */
-.testimonials { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.testimonials {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(16,185,129,.09) 0%, transparent 65%);
+  pointer-events: none;
+}
 
 .testimonials-header { margin-bottom: 4rem; }
 
@@ -403,12 +447,26 @@ section { padding: 8rem 4rem; }
 /* ── CTA Banner ──────────────────────────────────────────── */
 .cta-banner {
   background: var(--bg);
+  position: relative;
+  overflow: hidden;
   padding: 6rem 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
   border-top: 1px solid var(--border);
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(16,185,129,.1) 0%, transparent 65%);
+  pointer-events: none;
 }
 
 .cta-banner h2 {
@@ -476,6 +534,19 @@ footer {
 /* ── Contact Page ────────────────────────────────────────── */
 .contact-hero {
   padding: 12rem 4rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: -5%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(16,185,129,.13) 0%, transparent 65%);
+  pointer-events: none;
 }
 
 .contact-grid {

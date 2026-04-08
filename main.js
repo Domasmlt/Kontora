@@ -42,7 +42,7 @@ if (track) {
   cards.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-    dot.setAttribute('aria-label', `Slide ${i + 1}`);
+    dot.setAttribute('aria-label', `Skaidrė ${i + 1}`);
     dot.addEventListener('click', () => goTo(i));
     dotsWrap.appendChild(dot);
   });
@@ -116,13 +116,13 @@ if (form) {
     if (!allValid) return;
 
     const btn = form.querySelector('[type="submit"]');
-    btn.textContent = 'Sending…';
+    btn.textContent = 'Siunčiama…';
     btn.disabled = true;
 
     // Simulate async submission — replace with real fetch() to a backend
     setTimeout(() => {
       form.reset();
-      btn.textContent = 'Send Message';
+      btn.textContent = 'Siųsti žinutę';
       btn.disabled = false;
       document.getElementById('form-success').classList.add('visible');
       setTimeout(() => document.getElementById('form-success').classList.remove('visible'), 5000);
