@@ -10,7 +10,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -27,17 +26,57 @@
 
   <!-- ── Hero ────────────────────────────────────────────── -->
   <section class="hero" id="home">
-    <p class="hero-tag">// IT Paslaugos &amp; Konsultacijos</p>
-    <h1>IT Sprendimai,<br><span class="accent">Sklandžiai.</span></h1>
-    <p class="hero-sub">Mes projektuojame, kuriame ir plečiame skaitmeninę infrastruktūrą, kad jūsų verslas galėtų sutelkti dėmesį į tai, kas svarbiausia. Tiksli inžinerija, be triukšmo.</p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn-primary">Susisiekite</a>
-      <a href="#services" class="btn-ghost">Mūsų paslaugos</a>
+    <div class="hero-content">
+      <p class="hero-tag">// IT Paslaugos &amp; Konsultacijos</p>
+      <h1>IT Sprendimai,<br><span class="accent">Sklandžiai.</span></h1>
+      <p class="hero-sub">Mes projektuojame, kuriame ir plečiame skaitmeninę infrastruktūrą, kad jūsų verslas galėtų sutelkti dėmesį į tai, kas svarbiausia. Tiksli inžinerija, be triukšmo.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Susisiekite</a>
+        <a href="#services" class="btn-ghost">Mūsų paslaugos</a>
+      </div>
     </div>
+
+    <div class="hero-visual">
+      <div class="scene-terminal">
+        <div class="terminal-head">
+          <span class="tdot"></span><span class="tdot"></span><span class="tdot g"></span>
+          <span class="tpath">~/production/deploy</span>
+        </div>
+        <div class="terminal-body" id="termBody"></div>
+        <div class="visual-frame">
+          <i class="corner tl"></i><i class="corner tr"></i>
+          <i class="corner bl"></i><i class="corner br"></i>
+        </div>
+        <div class="visual-status" id="termStatus">UPTIME · 99.99%</div>
+      </div>
+    </div>
+
     <div class="hero-scroll">Slinkite žemyn</div>
   </section>
 
-  <!-- ── Services ────────────────────────────────────────── -->
+  <!-- ── Proof strip ──────────────────────────────────────── -->
+  <section class="proof" id="proof">
+    <div class="logo-strip reveal">
+      <div class="intro">// Pasitiki</div>
+      <div class="logos">
+        <span class="lg bold">NordFlow</span>
+        <span class="lg">EMBER/digital</span>
+        <span class="lg bold">Vanta·</span>
+        <span class="lg serif">Baltijos Grupė</span>
+        <span class="lg">◆ AXIOM</span>
+        <span class="lg bold">kvark.io</span>
+      </div>
+    </div>
+
+    <div class="stats-band reveal">
+      <div class="stat"><div class="v">200<span class="unit">+</span></div><div class="l">Sėkmingų diegimų</div></div>
+      <div class="stat"><div class="v">99.99<span class="unit">%</span></div><div class="l">Vidutinis veikimo laikas</div></div>
+      <div class="stat"><div class="v">&lt;15<span class="unit">min</span></div><div class="l">Vidutinis atkūrimo laikas</div></div>
+      <div class="stat"><div class="v">24<span class="unit">h</span></div><div class="l">Atsakymo laikas</div></div>
+    </div>
+  </section>
+
+  <!-- ── Services (editor tabs) ──────────────────────────── -->
   <section class="services" id="services">
     <div class="services-header reveal">
       <p class="section-label">// Ką mes darome</p>
@@ -45,116 +84,64 @@
       <p class="section-sub">Nuo idėjos iki diegimo ir toliau — apimame kiekvieną jūsų technologijų steko sluoksnį.</p>
     </div>
 
-    <div class="services-grid">
-
-      <div class="service-card reveal">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-        </svg>
-        <h3>Svetainių kūrimas</h3>
-        <p>Tobulos svetainės ir žiniatinklio programos, sukurtos veikimui, išplečiamumui ir sklandžiai vartotojo patirčiai visuose įrenginiuose.</p>
+    <div class="svc-c reveal">
+      <div class="svc-c-tabs" id="svcCTabs">
+        <div class="svc-c-tab active" data-idx="0"><span class="tab-num">01</span>web.ts</div>
+        <div class="svc-c-tab" data-idx="1"><span class="tab-num">02</span>cloud.tf</div>
+        <div class="svc-c-tab" data-idx="2"><span class="tab-num">03</span>consulting.md</div>
+        <div class="svc-c-tab" data-idx="3"><span class="tab-num">04</span>security.yml</div>
+        <div class="svc-c-tab" data-idx="4"><span class="tab-num">05</span>data.sql</div>
+        <div class="svc-c-tab" data-idx="5"><span class="tab-num">06</span>support.log</div>
       </div>
-
-      <div class="service-card reveal">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-        <h3>Debesijos infrastruktūra</h3>
-        <p>Architektūros projektavimas, migracija ir valdymas AWS, Azure ar GCP platformose — atspariai, ekonomiškai optimizuotai ir visada prieinamai.</p>
-      </div>
-
-      <div class="service-card reveal">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
-        </svg>
-        <h3>IT Konsultacijos</h3>
-        <p>Strateginės technologijų rekomendacijos, pritaikytos jūsų tikslams. Audituojame, planuojame ir sudarome jūsų IT aplinkos veiksmų planą.</p>
-      </div>
-
-      <div class="service-card reveal">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-        <h3>Kibernetinis saugumas</h3>
-        <p>Įsiskverbimo testavimas, pažeidžiamumų vertinimas ir nuolatinė stebėsena, kad jūsų sistemos ir duomenys būtų apsaugoti visą parą.</p>
-      </div>
-
-      <div class="service-card reveal">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-        </svg>
-        <h3>Duomenys ir analitika</h3>
-        <p>Paverskite neapdorotus duomenis į vertingas įžvalgas. Projektuojame duomenų srautus, prietaisų skydelius ir ataskaitų sistemas.</p>
-      </div>
-
-      <div class="service-card reveal">
-        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-        </svg>
-        <h3>IT pagalba ir priežiūra</h3>
-        <p>Aktyvi stebėsena ir techninio aptarnavimo pagalba, laikanti jūsų komandą produktyvia. Mes rūpinamės technologijomis, kad jums nereikėtų.</p>
-      </div>
-
+      <div id="svcCPanels"></div>
     </div>
   </section>
 
-  <!-- ── Testimonials ─────────────────────────────────────── -->
+  <!-- ── How we work ─────────────────────────────────────── -->
+  <section class="how-we-work" id="how-we-work">
+    <div class="hww-header reveal">
+      <p class="section-label">// Kaip dirbame</p>
+      <h2 class="section-title">Trys etapai. Aiškūs rezultatai.<br>Nėra staigmenų.</h2>
+    </div>
+
+    <div class="hww-a reveal">
+      <div class="hww-a-step">
+        <div class="idx">01</div>
+        <div class="tag">// Atradimas</div>
+        <h3>Išsiaiškiname</h3>
+        <p>Audituojame jūsų dabartinę sistemą, išklausome komandą ir sudarome tikslų veiksmų planą su rizikomis, kaštais ir laiko skale.</p>
+        <div class="dur">1–2 savaitės</div>
+      </div>
+      <div class="hww-a-step">
+        <div class="idx">02</div>
+        <div class="tag">// Įgyvendinimas</div>
+        <h3>Kuriame</h3>
+        <p>Projektuojame, kuriame ir diegiame. Jūs matote pažangą kas savaitę, ne tik paleidimo dieną. Jokių juodųjų dėžių.</p>
+        <div class="dur">4–12 savaičių</div>
+      </div>
+      <div class="hww-a-step">
+        <div class="idx">03</div>
+        <div class="tag">// Priežiūra</div>
+        <h3>Palaikome</h3>
+        <p>Stebime, optimizuojame ir plečiame. 24/7 stebėsena, aiškios SLA ir ketvirtinės peržiūros — kad sistema augtų kartu su jumis.</p>
+        <div class="dur">Nuolatinis</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials (ticker + metrics) ─────────────────── -->
   <section class="testimonials" id="testimonials">
     <div class="testimonials-header reveal">
       <p class="section-label">// Klientų balsai</p>
       <h2 class="section-title">Mumis pasitiki komandos,<br>kurios juda greitai.</h2>
     </div>
 
-    <div class="testimonials-track-wrap">
-      <div class="testimonials-track" id="testimonials-track">
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">Sintaksė per mažiau nei tris savaites atnaujino visą mūsų debesijos infrastruktūrą. Išlaidos sumažėjo 40%, o veikimo laikas nuo tada buvo nepriekaištingas. Tikrai įspūdingas darbas.</p>
-          <div class="testimonial-author">
-            <strong>Marius Kazlauskas</strong>
-            <span>CTO — NordFlow UAB</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">Mums reikėjo partnerio, kuris galėtų mąstyti tiek techniškai, tiek strategiškai. Jie pateikė visą IT veiksmų planą, kurį mūsų valdyba suprato ir patvirtino per vieną susitikimą.</p>
-          <div class="testimonial-author">
-            <strong>Laura Šimkutė</strong>
-            <span>CEO — Ember Digital</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">Jų saugumo auditas atskleidė kritinių pažeidžiamumų, kuriuos mūsų ankstesnis tiekėjas praleido dvejus metus. Profesionalūs, kruopštūs ir be jokio chaoso. Labai rekomenduoju.</p>
-          <div class="testimonial-author">
-            <strong>Tomas Petrauskas</strong>
-            <span>IT vadovas — Baltijos Grupė</span>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">Jų sukurta žiniatinklio platforma apdoroja dešimt kartų daugiau srauto, nei tikėjomės per paleidimą. Veikimas ir dizainas — jie suderino abu, ir mums nereikėjo pateikti nė vieno pakeitimo prašymo.</p>
-          <div class="testimonial-author">
-            <strong>Ieva Jonaitytė</strong>
-            <span>Produktų direktorė — Vanta Commerce</span>
-          </div>
-        </div>
-
+    <div class="test-b-wrap reveal">
+      <div class="test-b-sidebar">
+        <div class="label">// Pasirinkite klientą</div>
+        <div class="test-b-list" id="testBList"></div>
       </div>
-    </div>
-
-    <div class="testimonials-controls">
-      <button class="carousel-btn" id="carousel-prev" aria-label="Ankstesnis">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="15 18 9 12 15 6"/>
-        </svg>
-      </button>
-      <button class="carousel-btn" id="carousel-next" aria-label="Kitas">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="9 18 15 12 9 6"/>
-        </svg>
-      </button>
-      <div class="carousel-dots" id="carousel-dots"></div>
+      <div class="test-b-panel" id="testBPanel"></div>
     </div>
   </section>
 
@@ -180,6 +167,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

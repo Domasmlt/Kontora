@@ -1,4 +1,8 @@
 
+# Dependencies & build output
+node_modules/
+dist/
+
 # PartnerCore local data (per-developer memory, knowledge overrides, findings)
 .partnercore/
 partnercore-al-performance/
